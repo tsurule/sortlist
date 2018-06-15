@@ -50,7 +50,7 @@ Nothing more, then you will get modifying HTML structure:
 </ul>
 ```
 
-Additional configuration is class modification for flagged head is:
+Additional configuration is class modification for flagged head:
 
 	$('.js-sortlist').sortList({
 	  mainClass: 'some-list'
