@@ -53,14 +53,15 @@ Nothing more, then you will get modifying HTML structure:
 Additional configuration is class modification for flagged head:
 
 	$('.js-sortlist').sortList({
-	  mainClass: 'some-list'
+	  classMain: 'some-list',
+	  classModificator: '__flag'
 	});
 
 It will looks like:
 
 ```html
 <ul class="some-list js-sortlist">
-  <div class="some-list__head">A</div> <!-- it will help to follow your structure and css methodologies -->
+  <div class="some-list__flag">A</div> <!-- it will help to follow your structure and css methodologies -->
   <li class="some-list__item">Addy Osmani</li>
   <li class="some-list__item">Axel Rauschmayer</li>
   	...
