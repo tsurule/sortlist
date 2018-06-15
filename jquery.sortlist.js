@@ -45,15 +45,19 @@
 
 		this.each(function() {
 
-			var element = $(this),	
+			var element = $(this),
+				customClass	= 'sortlist',
 				sortItems = $('li', element),				
 				sortedItems = sortItems.get().sort(function(a, b) {
 					var aText = $.trim($(a).text().toUpperCase()),
 						bText = $.trim($(b).text().toUpperCase());
 
 					return aText.localeCompare(bText);
-				});
-
+				}),
+				settings = $.extend({
+					mainClass: customClass
+				}, options );
+			
 			element.append(sortedItems); 
 
 			// create the titles
@@ -64,7 +68,7 @@
 					firstLetter = text[0];
 
 				if (firstLetter != lastLetter) {
-					$this.before('<div class="sortlist__head">' + firstLetter);
+					$this.before('<div class="'+settings.mainClass+'__head">' + firstLetter);
 					lastLetter = firstLetter;
 				}
 			});
