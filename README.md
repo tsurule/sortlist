@@ -49,3 +49,20 @@ Nothing more, then you will get modifying HTML structure:
   <li class="some-list__item">Richard E. Silverman</li>
 </ul>
 ```
+
+Additional configuration is class modification for flagged head is:
+
+	$('.js-sortlist').sortList({
+	  mainClass: 'some-list'
+	});
+
+It will looks like:
+
+```html
+<ul class="some-list js-sortlist">
+  <div class="some-list__head">A</div> <!-- it will help to follow your structure and css methodologies -->
+  <li class="some-list__item">Addy Osmani</li>
+  <li class="some-list__item">Axel Rauschmayer</li>
+  	...
+</ul>
+```
